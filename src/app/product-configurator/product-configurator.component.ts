@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { getImg } from '../config.assets';
 
 @Component({
@@ -6,7 +6,7 @@ import { getImg } from '../config.assets';
   templateUrl: './product-configurator.component.html',
   styleUrls: ['./product-configurator.component.scss']
 })
-export class ProductConfiguratorComponent implements OnInit {
+export class ProductConfiguratorComponent implements OnInit, AfterViewInit {
   currentProduct = getImg('wallet-black.jpg')
   products = [getImg('wallet-black.jpg'), getImg('wallet-brown.jpg')];
 
@@ -23,8 +23,19 @@ export class ProductConfiguratorComponent implements OnInit {
 
 
 
+  @ViewChild('imgCanvas') canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('imgContainer') imgContainer: ElementRef<HTMLDivElement>;
+
 
   constructor() { }
+
+  ngAfterViewInit(): void {
+    const context = this.canvas.nativeElement.getContext('2d');
+    this.imgContainer.nativeElement.addEventListener('click', () => {
+      window.open('', this.canvas.nativeElement.toDataURL());
+    })
+
+  }
 
   ngOnInit(): void {
   }

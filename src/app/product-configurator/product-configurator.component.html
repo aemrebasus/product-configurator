@@ -1,14 +1,15 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap"
     rel="stylesheet">
+ 
 
 
 
 <div class="container">
 
-    <div class="col">
+    <div class="col" >
 
-        <div class="img-container">
+        <div class="img-container" #imgContainer>
             <img [src]="currentProduct">
             <div class="img-mask">
                 <div class="product-label"
@@ -19,34 +20,33 @@
         </div>
 
 
-        <div class="form-control">
-            <span>Text</span>
-            <input type="text" placeholder="ENTER NAME OR MESSAGE" [(ngModel)]="productLabel.text">
-        </div>
-        <div class="form-control">
-
-            <span>Verticle</span>
-            <input type="range" max="175" min="-30" [(ngModel)]="productLabel.top">
-        </div>
-        <div class="form-control">
-            <span>Horizontal</span>
-            <input type="range" max="175" min="-30" [(ngModel)]="productLabel.left">
-        </div>
-
-
-
     </div>
 
     <div class="col">
         <h3>Select Product Color</h3>
         <div class="product-colors">
-            <div [class]="product.color" (click)="select(product.path)"
+            <div  [class]="product.color" (click)="select(product.path)"
                 [class.active-color]="currentProduct == product.path" *ngFor="let product of productDetails()">
                 {{product.color | uppercase}}
             </div>
         </div>
 
         <h3>Configure Text</h3>
+
+        <div class="form-control ">
+            <span>Text</span>
+            <input type="text" placeholder="ENTER NAME OR MESSAGE" [(ngModel)]="productLabel.text">
+        </div>
+        <div class="form-control ">
+
+            <span>Verticle</span>
+            <input type="range" max="300" min="-30" [(ngModel)]="productLabel.top">
+        </div>
+        <div class="form-control ">
+            <span>Horizontal</span>
+            <input type="range" max="300" min="-30" [(ngModel)]="productLabel.left">
+        </div>
+
         <div class="form-control">
             <span>Text Color</span>
             <input type="color" [(ngModel)]="productLabel.color">
@@ -81,3 +81,14 @@
     </div>
 
 </div>
+
+
+
+
+
+<canvas #imgCanvas width="400" height="400">
+    <h1>Hello there</h1>
+</canvas>
+
+
+
