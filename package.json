@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e", 
-    "deploy":"gh-pages -d dist/product-configurator"
+    "deploy":"ng build --base-href https://aemrebasus.github.io/product-configurator/ && gh-pages -d dist/product-configurator"
   },
   "private": true,
   "dependencies": {
