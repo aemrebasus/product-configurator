@@ -364,7 +364,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProductConfiguratorComponent_div_24_Template_div_click_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3);
@@ -455,7 +455,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-product-configurator"]],
       decls: 57,
       vars: 23,
-      consts: [["href", "https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap", "rel", "stylesheet"], [1, "container"], [1, "col"], [1, "img-container"], [3, "src"], [1, "img-mask"], [1, "product-label"], [1, "form-control"], ["type", "text", "placeholder", "ENTER NAME OR MESSAGE", 3, "ngModel", "ngModelChange"], ["type", "range", "max", "175", "min", "10", 3, "ngModel", "ngModelChange"], ["type", "range", "max", "175", "min", "20", 3, "ngModel", "ngModelChange"], [1, "product-colors"], [3, "class", "active-color", "click", 4, "ngFor", "ngForOf"], ["type", "color", 3, "ngModel", "ngModelChange"], [3, "ngModel", "ngModelChange"], ["value", "'Bungee Outline', cursive", "selected", "", 2, "font-family", "'Bungee Outline', cursive"], ["value", "'Flavors', cursive", 2, "font-family", "'Flavors', cursive"], ["value", "'Indie Flower', cursive", 2, "font-family", "'Indie Flower', cursive"], ["value", "'Miltonian Tattoo', cursive", 2, "font-family", "'Miltonian Tattoo', cursive"], ["value", "'Plaster', cursive", 2, "font-family", "'Plaster', cursive"], ["type", "range", "min", "4", "max", "100", 3, "ngModel", "ngModelChange"], ["type", "range", "min", "0", "max", "100", 3, "ngModel", "ngModelChange"], ["type", "range", "min", "0", "max", "500", 3, "ngModel", "ngModelChange"], [3, "click"]],
+      consts: [["href", "https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap", "rel", "stylesheet"], [1, "container"], [1, "col"], [1, "img-container"], [3, "src"], [1, "img-mask"], [1, "product-label"], [1, "form-control"], ["type", "text", "placeholder", "ENTER NAME OR MESSAGE", 3, "ngModel", "ngModelChange"], ["type", "range", "max", "175", "min", "-30", 3, "ngModel", "ngModelChange"], [1, "product-colors"], [3, "class", "active-color", "click", 4, "ngFor", "ngForOf"], ["type", "color", 3, "ngModel", "ngModelChange"], [3, "ngModel", "ngModelChange"], ["value", "'Bungee Outline', cursive", "selected", "", 2, "font-family", "'Bungee Outline', cursive"], ["value", "'Flavors', cursive", 2, "font-family", "'Flavors', cursive"], ["value", "'Indie Flower', cursive", 2, "font-family", "'Indie Flower', cursive"], ["value", "'Miltonian Tattoo', cursive", 2, "font-family", "'Miltonian Tattoo', cursive"], ["value", "'Plaster', cursive", 2, "font-family", "'Plaster', cursive"], ["type", "range", "min", "4", "max", "100", 3, "ngModel", "ngModelChange"], ["type", "range", "min", "0", "max", "100", 3, "ngModel", "ngModelChange"], ["type", "range", "min", "0", "max", "500", 3, "ngModel", "ngModelChange"], [3, "click"]],
       template: function ProductConfiguratorComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "link", 0);
@@ -524,7 +524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "input", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "input", 9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_input_ngModelChange_19_listener($event) {
             return ctx.productLabel.left = $event;
@@ -544,9 +544,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, ProductConfiguratorComponent_div_24_Template, 3, 7, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, ProductConfiguratorComponent_div_24_Template, 3, 7, "div", 11);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -564,7 +564,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "input", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "input", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_input_ngModelChange_30_listener($event) {
             return ctx.productLabel.color = $event;
@@ -582,37 +582,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "select", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "select", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_select_ngModelChange_34_listener($event) {
             return ctx.productLabel.font = $event;
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "option", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "option", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Font ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "option", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "option", 15);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Font ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "option", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "option", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Font ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "option", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "option", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Font ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "option", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "option", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, "Font ");
 
@@ -630,7 +630,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "input", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "input", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_input_ngModelChange_48_listener($event) {
             return ctx.productLabel.size = $event;
@@ -648,7 +648,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "input", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "input", 20);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_input_ngModelChange_52_listener($event) {
             return ctx.productLabel.letterSpacing = $event;
@@ -666,7 +666,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "input", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "input", 21);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ProductConfiguratorComponent_Template_input_ngModelChange_56_listener($event) {
             return ctx.productLabel.transform = $event;
