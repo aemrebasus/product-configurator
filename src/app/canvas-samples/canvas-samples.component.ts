@@ -10,6 +10,17 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
   @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
 
+  config = {
+    source: 'arc',
+    color: 'red',
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+    text: '',
+  }
+
+
   constructor() { }
   ngAfterViewInit(): void {
 
@@ -71,6 +82,17 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
   }
+
+
+  render(): void {
+
+
+  }
+
+  clear(): void {
+
+  }
+
 
 }
 export interface IShape {

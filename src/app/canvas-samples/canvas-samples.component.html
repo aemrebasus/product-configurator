@@ -1,2 +1,57 @@
-<h1>Canvas Samples</h1>
-<canvas #canvas width="300" height="300"></canvas>
+<div class="container">
+    <div class="canvas-container">
+        <h1>Canvas Samples</h1>
+        <canvas #canvas width="200" height="200"></canvas>
+    </div>
+    <div class="tool-bar">
+        <h1>Tool Bar</h1>
+        <div class="form-control">
+            <span>Source</span>
+            <select name="source" id="source" [(ngModel)]="config.source">
+                <option value="arc" selected>Arc</option>
+                <option value="rec">Rect</option>
+                <option value="img">Image</option>
+                <option value="video">Video</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <span>Fill Color</span>
+            <input type="color" [(ngModel)]="config.color">
+        </div>
+        <div class="form-control">
+            <span>Text</span>
+            <input type="text" [(ngModel)]="config.text">
+        </div>
+
+        <div class="form-control">
+            <span>X</span>
+            <input type="range" max="200" min="0" [(ngModel)]="config.x">
+        </div>
+
+        <div class="form-control">
+            <span>Y</span>
+            <input type="range" max="200" min="0" [(ngModel)]="config.y">
+        </div>
+
+        <div class="form-control">
+            <span>Width</span>
+            <input type="range" max="1000" min="0" [(ngModel)]="config.width">
+        </div>
+
+        <div class="form-control">
+            <span>Height</span>
+            <input type="range" max="1000" min="0" [(ngModel)]="config.height">
+        </div>
+
+
+
+        <div class="form-control">
+            <div class="button-group">
+                <button (click)="render()">Render</button>
+                <button (click)="clear()">Clear</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
