@@ -71,3 +71,35 @@ img {
     text-align: center;
     text-shadow: inset 0px 0px 3px black;
 }
+
+input {
+    width: 200px;
+}
+
+select {
+    width: 200px;
+    height: 70px;
+    border: none;
+}
+
+select:active,
+select:focus,
+select:hover {
+    border: none;
+    outline: none;
+}
+
+select::after {
+    margin-left: 100px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    
+}

@@ -1,4 +1,6 @@
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap"
+    rel="stylesheet">
 
 
 
@@ -10,23 +12,24 @@
             <img [src]="currentProduct">
             <div class="img-mask">
                 <div class="product-label"
-                    style="position: absolute; margin-left:{{productLabel.left}}px; top:{{productLabel.top}}px; z-index:3; color:{{productLabel.color}}; font-size:{{productLabel.size}}pt; font-family:{{productLabel.font}}">
+                    style="position: absolute; margin-left:{{productLabel.left}}px; top:{{productLabel.top}}px; z-index:3; color:{{productLabel.color}}; font-size:{{productLabel.size}}pt; font-family:{{productLabel.font}}; letter-spacing:{{productLabel.letterSpacing}}px; transform: rotate({{productLabel.transform}}deg);">
                     {{productLabel.text}}
                 </div>
             </div>
         </div>
 
 
-        <div>
+        <div class="form-control">
+            <span>Text</span>
             <input type="text" placeholder="ENTER NAME OR MESSAGE" [(ngModel)]="productLabel.text">
         </div>
-        <div>
+        <div class="form-control">
 
-            Verticle
+            <span>Verticle</span>
             <input type="range" max="175" min="10" [(ngModel)]="productLabel.top">
         </div>
-        <div>
-            Horizontal
+        <div class="form-control">
+            <span>Horizontal</span>
             <input type="range" max="175" min="20" [(ngModel)]="productLabel.left">
         </div>
 
@@ -44,24 +47,35 @@
         </div>
 
         <h3>Configure Text</h3>
-        <div>
-            Text Color
+        <div class="form-control">
+            <span>Text Color</span>
             <input type="color" [(ngModel)]="productLabel.color">
         </div>
-        <div>
-            Font Family
-            <input type="text" list="fonts" [(ngModel)]="productLabel.font" (click)="clearFont()">
-            <datalist id="fonts">
-                <option>'Bungee Outline', cursive</option>
-                <option>'Flavors', cursive</option>
-                <option>'Indie Flower', cursive</option>
-                <option>'Miltonian Tattoo', cursive</option>
-                <option>'Plaster', cursive</option>
-            </datalist>
+        <div class="form-control">
+            <span> Font Family</span>
+
+            <select style="font-family:{{productLabel.font}}; font-size:20pt; color:black;"
+                [(ngModel)]="productLabel.font">
+                <option style="font-family:'Bungee Outline', cursive;" value="'Bungee Outline', cursive" selected>Font
+                </option>
+                <option style="font-family:'Flavors', cursive;" value="'Flavors', cursive">Font </option>
+                <option style="font-family:'Indie Flower', cursive;" value="'Indie Flower', cursive">Font </option>
+                <option style="font-family:'Miltonian Tattoo', cursive;" value="'Miltonian Tattoo', cursive">Font
+                </option>
+                <option style="font-family:'Plaster', cursive;" value="'Plaster', cursive">Font </option>
+            </select>
         </div>
-        <div>
-            Font Size
+        <div class="form-control">
+            <span>Font Size</span>
             <input type="range" min="4" max="100" [(ngModel)]="productLabel.size">
+        </div>
+        <div class="form-control">
+            <span>Letter Spacing</span>
+            <input type="range" min="0" max="100" [(ngModel)]="productLabel.letterSpacing">
+        </div>
+        <div class="form-control">
+            <span>Text Transform</span>
+            <input type="range" min="0" max="500" [(ngModel)]="productLabel.transform">
         </div>
 
     </div>

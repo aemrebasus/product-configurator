@@ -16,7 +16,9 @@ export class ProductConfiguratorComponent implements OnInit {
     color: 'white',
     text: 'Name',
     size: 14,
-    font: '',
+    font: `\'Bungee Outline\', cursive`,
+    letterSpacing: 0,
+    transform: 0
   }
 
 
