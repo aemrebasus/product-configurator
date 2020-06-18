@@ -37,10 +37,16 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     });
 
 
-
-
-
-    
+    // Fill Arc
+    this.fillArc(context, {
+      x: 100,
+      y: 100,
+      startAngle: 0,
+      endAngle: (Math.PI),
+      radius: 30,
+      style: 'blue',
+      clockwise: false
+    });
 
 
   }
@@ -48,11 +54,18 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
 
 
-  fillRect(context: CanvasRenderingContext2D, area: IArea) {
+  fillRect(context: CanvasRenderingContext2D, area: IRect) {
     const { style, x, y, width, height } = area;
     context.fillStyle = style;
     context.fillRect(x, y, width, height);
   }
+
+
+  fillArc(context: CanvasRenderingContext2D, arc: IArc) {
+    context.arc(arc.x, arc.y, arc.radius, arc.startAngle, arc.endAngle, arc.clockwise);
+    context.fill();
+  }
+
 
 
   ngOnInit(): void {
@@ -60,12 +73,20 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
   }
 
 }
-
-
-interface IArea {
+export interface IShape {
   style: string;
   x: number;
   y: number;
+}
+
+export interface IRect extends IShape {
   width: number;
   height: number;
+}
+
+export interface IArc extends IShape {
+  radius: number;
+  startAngle: number;
+  endAngle: number;
+  clockwise: boolean;
 }
