@@ -86,27 +86,37 @@
 
         <div class="line-group" *ngIf="config.source =='line' ">
 
-            <div class="form-control">
-                <span>X1</span>
-                <input type="text" max="100" min="0" [(ngModel)]="config.x1">
-                <div class="badge">{{config.x1}}</div>
+            <div class="form-control line-input">
+                <div class="point">
+                    <span>X1</span>
+                    <input type="text" max="100" min="0" [(ngModel)]="config.x1">
+                </div>
+
+                <div class="point">
+                    <span>Y1</span>
+                    <input type="text" max="100" min="0" [(ngModel)]="config.y1">
+                </div>
+
+                <div class="point">
+                    <span>X2</span>
+                    <input type="text" max="100" min="0" [(ngModel)]="config.x2">
+                </div>
+
+                <div class="point">
+                    <span>Y2</span>
+                    <input type="text" max="100" min="0" [(ngModel)]="config.y2">
+                </div>
             </div>
 
             <div class="form-control">
-                <span>Y1</span>
-                <input type="text" max="100" min="0" [(ngModel)]="config.y1">
                 <div class="badge">{{config.y1}}</div>
             </div>
 
             <div class="form-control">
-                <span>X2</span>
-                <input type="text" max="100" min="0" [(ngModel)]="config.x2">
                 <div class="badge">{{config.x2}}</div>
             </div>
 
             <div class="form-control">
-                <span>Y2</span>
-                <input type="text" max="100" min="0" [(ngModel)]="config.y2">
                 <div class="badge">{{config.y2}}</div>
             </div>
 

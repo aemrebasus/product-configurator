@@ -78,6 +78,19 @@ input {
 
 .form-control span {
     min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.point {
+    margin-left: 4px;
+    overflow: hidden;
+}
+.point input {
+    width: 50px;
+    
 }
 
 canvas {

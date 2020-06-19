@@ -26,10 +26,10 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     lineWidth: 5,
     strokeStyle: 'blue',
     radius: 30,
-    x1: 0,
-    x2: 0,
+    x1: 50,
     y1: 50,
-    y2: 50,
+    x2: 100,
+    y2: 100,
   }
 
 
@@ -86,8 +86,11 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
     this.context.stroke();
 
+    this.context.lineCap = 'round'
 
-    this.context.closePath();
+
+
+    // this.context.closePath();
 
 
   }
