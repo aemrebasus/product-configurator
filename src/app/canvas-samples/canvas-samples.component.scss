@@ -46,5 +46,40 @@ input {
 }
 .button-group *:first-child {
     margin-left: 0px;
-    
+}
+
+.badge {
+    background-color: gray;
+    width: 60px;
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    font-size: 11pt;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0px 0px 3px black;
+}
+
+.form-control span {
+    min-width: 100px;
+}
+
+canvas {
+    border: 1px solid black;
 }

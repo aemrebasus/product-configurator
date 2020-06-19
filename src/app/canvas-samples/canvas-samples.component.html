@@ -1,46 +1,92 @@
 <div class="container">
+    
     <div class="canvas-container">
         <h1>Canvas Samples</h1>
         <canvas #canvas width="200" height="200"></canvas>
     </div>
+
+
     <div class="tool-bar">
         <h1>Tool Bar</h1>
         <div class="form-control">
             <span>Source</span>
             <select name="source" id="source" [(ngModel)]="config.source">
                 <option value="arc" selected>Arc</option>
-                <option value="rec">Rect</option>
+                <option value="rect">Rect</option>
                 <option value="img">Image</option>
                 <option value="video">Video</option>
             </select>
         </div>
         <div class="form-control">
             <span>Fill Color</span>
-            <input type="color" [(ngModel)]="config.color">
+            <input type="color" [(ngModel)]="config.style">
         </div>
         <div class="form-control">
             <span>Text</span>
             <input type="text" [(ngModel)]="config.text">
         </div>
 
-        <div class="form-control">
-            <span>X</span>
-            <input type="range" max="200" min="0" [(ngModel)]="config.x">
-        </div>
+
+
+
 
         <div class="form-control">
-            <span>Y</span>
-            <input type="range" max="200" min="0" [(ngModel)]="config.y">
+            <div class="checkbox-group">
+                <span>Stroke</span>
+                <input type="checkbox" [(ngModel)]="config.stroke">
+            </div>
         </div>
 
-        <div class="form-control">
-            <span>Width</span>
-            <input type="range" max="1000" min="0" [(ngModel)]="config.width">
+        <div class="stroke-group">
+
+            <div class="form-control" *ngIf="config.stroke">
+                <span>Line Width</span>
+                <input type="range" max="50" min="0" [(ngModel)]="config.lineWidth">
+                <div class="badge">{{config.lineWidth}}</div>
+            </div>
+            <div class="form-control" *ngIf="config.stroke">
+                <span>Stroke Color</span>
+                <input type="color"  [(ngModel)]="config.strokeStyle">
+            </div>
+
         </div>
 
-        <div class="form-control">
-            <span>Height</span>
-            <input type="range" max="1000" min="0" [(ngModel)]="config.height">
+        <div class="location-group">
+
+            <div class="form-control">
+                <span>X</span>
+                <input type="range" max="200" min="0" [(ngModel)]="config.x">
+                <div class="badge">{{config.x}}</div>
+            </div>
+
+            <div class="form-control">
+                <span>Y</span>
+                <input type="range" max="200" min="0" [(ngModel)]="config.y">
+                <div class="badge">{{config.y}}</div>
+            </div>
+        </div>
+
+        <div class="size-group" *ngIf="config.source != 'arc'">
+
+            <div class="form-control">
+                <span>Width</span>
+                <input type="range" max="1000" min="0" [(ngModel)]="config.width">
+                <div class="badge">{{config.width}}</div>
+            </div>
+
+            <div class="form-control">
+                <span>Height</span>
+                <input type="range" max="1000" min="0" [(ngModel)]="config.height">
+                <div class="badge">{{config.height}}</div>
+            </div>
+        </div>
+
+
+
+        <div class="form-control" *ngIf="config.source == 'arc'">
+            <span>Radius</span>
+            <input type="range" max="100" min="0" [(ngModel)]="config.radius">
+            <div class="badge">{{config.radius}}</div>
         </div>
 
 
