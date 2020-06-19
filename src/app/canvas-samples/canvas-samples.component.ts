@@ -101,6 +101,7 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
   }
 
 
+
   render(): void {
     switch (this.config.source) {
 
@@ -119,9 +120,16 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
   }
 
+  closePath() {
+    this.context.closePath();
+  }
+
+  beginPath() {
+    this.context.beginPath();
+  }
+
   clear(): void {
     this.context.clearRect(0, 0, 200, 200);
-
   }
 
 
