@@ -23,6 +23,8 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     startAngle: 0,
     endAngle: Math.PI * 2,
     clockwise: false,
+    lineWidth: 5,
+    strokeStyle: 'blue',
     radius: 30,
 
   }
@@ -78,7 +80,13 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
       case 'rect':
         this.context.beginPath();
         this.context.fillStyle = this.config.style;
-        this.context.fillRect(this.config.x, this.config.y, this.config.width, this.config.height);
+        this.context.rect(this.config.x, this.config.y, this.config.width, this.config.height);
+        if (this.config.stroke) {
+          this.context.lineWidth = this.config.lineWidth;
+          this.context.strokeStyle = this.config.strokeStyle;
+          this.context.stroke();
+        }
+        this.context.fill();
         this.context.closePath();
         break;
     }
