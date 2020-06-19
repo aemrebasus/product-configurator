@@ -5,12 +5,14 @@ import { CanvasSamplesComponent } from './canvas-samples/canvas-samples.componen
 
 
 const routes: Routes = [
-  { path: '', component: ProductConfiguratorComponent },
+  {
+    path: '', component: ProductConfiguratorComponent
+  },
   { path: 'canvas', component: CanvasSamplesComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
