@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <div class="canvas-container">
         <h1>Canvas Samples</h1>
         <canvas #canvas width="200" height="200"></canvas>
@@ -13,10 +13,12 @@
             <select name="source" id="source" [(ngModel)]="config.source">
                 <option value="arc" selected>Arc</option>
                 <option value="rect">Rect</option>
+                <option value="line">Line</option>
                 <option value="img">Image</option>
                 <option value="video">Video</option>
             </select>
         </div>
+
         <div class="form-control">
             <span>Fill Color</span>
             <input type="color" [(ngModel)]="config.style">
@@ -46,12 +48,12 @@
             </div>
             <div class="form-control" *ngIf="config.stroke">
                 <span>Stroke Color</span>
-                <input type="color"  [(ngModel)]="config.strokeStyle">
+                <input type="color" [(ngModel)]="config.strokeStyle">
             </div>
 
         </div>
 
-        <div class="location-group">
+        <div class="location-group" *ngIf="config.source != 'line'">
 
             <div class="form-control">
                 <span>X</span>
@@ -64,9 +66,10 @@
                 <input type="range" max="200" min="0" [(ngModel)]="config.y">
                 <div class="badge">{{config.y}}</div>
             </div>
+
         </div>
 
-        <div class="size-group" *ngIf="config.source != 'arc'">
+        <div class="size-group" *ngIf="config.source == 'rect'">
 
             <div class="form-control">
                 <span>Width</span>
@@ -81,6 +84,33 @@
             </div>
         </div>
 
+        <div class="line-group" *ngIf="config.source =='line' ">
+
+            <div class="form-control">
+                <span>X1</span>
+                <input type="text" max="100" min="0" [(ngModel)]="config.x1">
+                <div class="badge">{{config.x1}}</div>
+            </div>
+
+            <div class="form-control">
+                <span>Y1</span>
+                <input type="text" max="100" min="0" [(ngModel)]="config.y1">
+                <div class="badge">{{config.y1}}</div>
+            </div>
+
+            <div class="form-control">
+                <span>X2</span>
+                <input type="text" max="100" min="0" [(ngModel)]="config.x2">
+                <div class="badge">{{config.x2}}</div>
+            </div>
+
+            <div class="form-control">
+                <span>Y2</span>
+                <input type="text" max="100" min="0" [(ngModel)]="config.y2">
+                <div class="badge">{{config.y2}}</div>
+            </div>
+
+        </div>
 
 
         <div class="form-control" *ngIf="config.source == 'arc'">

@@ -15,10 +15,10 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
   config: IConfig = {
     source: 'arc',
     style: '#00AA00',
-    x: 0,
-    y: 0,
-    width: 0,
-    height: 0,
+    x: 50,
+    y: 50,
+    width: 30,
+    height: 30,
     text: '',
     startAngle: 0,
     endAngle: Math.PI * 2,
@@ -26,7 +26,10 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     lineWidth: 5,
     strokeStyle: 'blue',
     radius: 30,
-
+    x1: 0,
+    x2: 0,
+    y1: 50,
+    y2: 50,
   }
 
 
@@ -38,18 +41,56 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
 
 
-  fillRect(area: IRect) {
-    const { style, x, y, width, height } = area;
-    this.context.fillStyle = style;
-    this.context.fillRect(x, y, width, height);
-  }
-
-
-  fillArc(arc: IArc) {
-    this.context.arc(arc.x, arc.y, arc.radius, arc.startAngle, arc.endAngle, arc.clockwise);
+  fillRect() {
+    this.context.beginPath();
+    this.context.fillStyle = this.config.style;
+    this.context.rect(this.config.x, this.config.y, this.config.width, this.config.height);
+    if (this.config.stroke) {
+      this.context.lineWidth = this.config.lineWidth;
+      this.context.strokeStyle = this.config.strokeStyle;
+      this.context.stroke();
+    }
     this.context.fill();
+    this.context.closePath();
   }
 
+
+  fillArc() {
+    this.context.fillStyle = this.config.style;
+
+    this.context.beginPath();
+    this.context.arc(this.config.x, this.config.y, this.config.radius,
+      this.config.startAngle, this.config.endAngle, this.config.clockwise);
+
+    if (this.config.stroke) {
+      this.context.lineWidth = this.config.lineWidth;
+      this.context.strokeStyle = this.config.strokeStyle;
+      this.context.stroke();
+    }
+    this.context.fill();
+    this.context.closePath();
+  }
+
+
+  drawLine() {
+
+    this.context.beginPath();
+    this.context.lineWidth = this.config.lineWidth;
+
+    this.context.fillStyle = this.config.style;
+    this.context.strokeStyle = this.config.strokeStyle;
+
+    this.context.moveTo(this.config.x1, this.config.y1);
+
+    this.context.lineTo(this.config.x2, this.config.y2);
+
+    this.context.stroke();
+
+
+    this.context.closePath();
+
+
+  }
 
 
   ngOnInit(): void {
@@ -61,33 +102,15 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     switch (this.config.source) {
 
       case 'arc':
-        this.context.fillStyle = this.config.style;
-
-        this.context.beginPath();
-        this.context.arc(this.config.x, this.config.y, this.config.radius,
-          this.config.startAngle, this.config.endAngle, this.config.clockwise);
-
-        if (this.config.stroke) {
-          this.context.lineWidth = this.config.lineWidth;
-          this.context.strokeStyle = this.config.strokeStyle;
-          this.context.stroke();
-        }
-        this.context.fill();
-        this.context.closePath();
-
+        this.fillArc();
         break;
 
       case 'rect':
-        this.context.beginPath();
-        this.context.fillStyle = this.config.style;
-        this.context.rect(this.config.x, this.config.y, this.config.width, this.config.height);
-        if (this.config.stroke) {
-          this.context.lineWidth = this.config.lineWidth;
-          this.context.strokeStyle = this.config.strokeStyle;
-          this.context.stroke();
-        }
-        this.context.fill();
-        this.context.closePath();
+        this.fillRect();
+        break;
+
+      case 'line':
+        this.drawLine();
         break;
     }
 
@@ -101,11 +124,15 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
 }
 export interface IConfig extends IRect, IArc {
-  source?: 'arc' | 'rect' | 'img' | 'video';
+  source?: 'arc' | 'rect' | 'img' | 'video' | 'line';
   text?: string;
 }
 
 export interface IShape {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
   style?: string;
   x?: number;
   y?: number;
