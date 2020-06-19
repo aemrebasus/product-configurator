@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 70%;
     margin: auto;
 }
@@ -29,7 +29,9 @@ input {
 }
 
 .tool-bar {
-    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+
     padding: 10px;
 }
 
@@ -90,7 +92,6 @@ input {
 }
 .point input {
     width: 50px;
-    
 }
 
 canvas {
