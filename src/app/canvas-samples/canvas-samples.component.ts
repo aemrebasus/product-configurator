@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { getImg } from '../config.assets';
 
 @Component({
   selector: 'app-canvas-samples',
@@ -98,7 +99,7 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
   drawImg() {
     const img = new Image();
-    img.src = '/assets/imgs/wallet-brown.jpg';
+    img.src = getImg('wallet-brown.jpg');
     img.onload = () => {
 
       const x = 0;
