@@ -1,3 +1,8 @@
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Flavors&family=Indie+Flower&family=Miltonian+Tattoo&family=Plaster&display=swap"
+    rel="stylesheet">
+
 <div class="container">
 
     <div class="canvas-container">
@@ -27,7 +32,20 @@
             <span>Text</span>
             <input type="text" [(ngModel)]="config.text">
         </div>
+        <div class="form-control">
+            <span> Font Family</span>
 
+            <select style="font-family:{{config.font}}; font-size:20pt; color:black;"
+                [(ngModel)]="config.font">
+                <option style="font-family:'Bungee Outline', cursive;" value="'Bungee Outline', cursive" selected>Font
+                </option>
+                <option style="font-family:'Flavors', cursive;" value="'Flavors', cursive">Font </option>
+                <option style="font-family:'Indie Flower', cursive;" value="'Indie Flower', cursive">Font </option>
+                <option style="font-family:'Miltonian Tattoo', cursive;" value="'Miltonian Tattoo', cursive">Font
+                </option>
+                <option style="font-family:'Plaster', cursive;" value="'Plaster', cursive">Font </option>
+            </select>
+        </div>
 
 
 

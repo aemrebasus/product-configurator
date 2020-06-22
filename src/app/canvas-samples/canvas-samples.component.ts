@@ -20,6 +20,7 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
     width: 30,
     height: 30,
     text: '',
+    font: '',
     startAngle: 0,
     endAngle: Math.PI * 2,
     clockwise: false,
@@ -95,8 +96,31 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
   }
 
+  drawImg() {
+    const img = new Image();
+    img.src = '/assets/imgs/wallet-brown.jpg';
+    img.onload = () => {
+
+      const x = 0;
+      const y = 0;
+
+      this.context.drawImage(img, 0, 0, 200, 200);
+      this.context.font = `14pt ${this.config.font}`;
+      this.context.fillStyle = this.config.style;
+      this.context.fillText(this.config.text, this.config.x, this.config.y);
+
+
+      this.context.closePath();
+
+    }
+  }
+
 
   ngOnInit(): void {
+
+
+
+
 
   }
 
@@ -115,6 +139,10 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
 
       case 'line':
         this.drawLine();
+        break;
+
+      case 'img':
+        this.drawImg();
         break;
     }
 
@@ -150,6 +178,7 @@ export interface IShape {
   stroke?: boolean;
   strokeStyle?: string;
   lineWidth?: number;
+  font?: string;
 }
 
 export interface IRect extends IShape {
