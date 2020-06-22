@@ -106,7 +106,7 @@ export class CanvasSamplesComponent implements OnInit, AfterViewInit {
       const y = 0;
 
       this.context.drawImage(img, 0, 0, 200, 200);
-      this.context.font = `14pt ${this.config.font}`;
+      this.context.font = `${this.config.fontSize}pt ${this.config.font}`;
       this.context.fillStyle = this.config.style;
       this.context.fillText(this.config.text, this.config.x, this.config.y);
 
@@ -180,6 +180,7 @@ export interface IShape {
   strokeStyle?: string;
   lineWidth?: number;
   font?: string;
+  fontSize?: number;
 }
 
 export interface IRect extends IShape {
